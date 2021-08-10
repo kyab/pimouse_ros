@@ -36,7 +36,7 @@ class Motor():
                 lf.write(str(int(round(left_hz))) + "\n")
                 rf.write(str(int(round(right_hz))) + "\n")
         except:
-            rospy.logerr("cannot write to rmotor_raw_*")
+            rospy.logerr("cannot write to rtmotor_raw_*")
 
     def callback_raw_freq(self, message):
         self.set_raw_freq(message.left_hz, message.right_hz)
